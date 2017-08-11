@@ -1,0 +1,36 @@
+<h5>Filters:</h5>
+
+<form class="form-inline" ng-if="filters.type === 'catalog'">
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Game Title:</label>
+        <input type="text" class="form-control large-input" placeholder="Game Title" ng-model="inputFilters.gameName">
+    </div>
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Genre:</label>
+        <input type="text" class="form-control large-input" placeholder="Genre" ng-model="inputFilters.genre">
+    </div>
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Cost below:</label>
+        <input type="number" class="form-control small-input" placeholder="Cost" ng-model="inputFilters.cost">
+    </div>
+    <button type="submit" class="btn btn-primary pull-right" ng-click="filterCatalog()">Search</button>
+</form>
+
+<form class="form-inline" ng-if="filters.type === 'reviews'">
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Game Name:</label>
+        <input type="text" class="form-control large-input" placeholder="Game Name" ng-model="inputFilters.gameName">
+    </div>
+
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Title:</label>
+        <input type="text" min="1" max="100" class="form-control small-input" placeholder="Title" ng-model="inputFilters.title">
+    </div>
+
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Score Above:</label>
+        <input type="number" min="1" max="100" class="form-control small-input" placeholder="Score" ng-model="inputFilters.score">
+    </div>
+
+    <button type="submit" class="btn btn-primary pull-right" ng-click="filterReviews()">Search</button>
+</form>

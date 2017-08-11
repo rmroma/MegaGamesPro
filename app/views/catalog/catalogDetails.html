@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-6">
+
+            <div class="row">
+                <div class="col-xs-5">
+
+                    <img src="../../../Content/Media/gameDetails.jpg" width="150" height="150" />
+
+                </div>
+
+                <div class="col-xs-7">
+                    <h2>{{game.gameName}}</h2>
+                    <div><b>Genre:</b> {{game.genre}} </div>
+
+                    <!--<div><b>Release Date:</b> {{game.date}}</div>-->
+
+                    <div><b>Description:</b> {{game.gameDesc}} </div>
+
+                    <div><b>Cost:</b> {{game.cost}} </div>
+                </div>
+            </div>
+
+            <div class="row score-badge">
+                <div class="col-xs-4 game-score">
+                    {{game.score}}
+                </div>
+                <div class="col-xs-4 glyphicon review-icon"></div>
+            </div>
+
+            <review-create-directive game="game"></review-create-directive>
+
+            <game-edit-directive game="tempGame" realgame="game"></game-edit-directive>
+
+        </div>
+
+        <pie-chart-directive game="game"></pie-chart-directive>
+
+    </div>
+</div>

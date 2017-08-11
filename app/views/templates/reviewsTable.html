@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Reviews Table</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Game</th>
+            <th>Score</th>
+            <th>Reviewer</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="review in reviews | orderBy : 'Game'">
+            <td>{{review.game}}</td>
+            <td>{{review.score}}</td>
+            <td>{{review.userId}}</td>
+            <td>{{review.reviewDate}}</td>
+        </tr>
+    </table>
+</div>

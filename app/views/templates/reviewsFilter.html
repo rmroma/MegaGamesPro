@@ -1,0 +1,14 @@
+<h5>Filters:</h5>
+
+<form class="form-inline">
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Game Title</label>
+        <input type="text" class="form-control large-input" placeholder="Fallout" ng-model="reviewsFilters.gameName">
+    </div>
+    <div class="form-group large-margin-right">
+        <label class="small-margin-right">Score Above</label>
+        <input type="number" min="0" max="100" class="form-control small-input" placeholder="Cost"
+               ng-model="reviewsFilters.score">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="filterReviews(reviewsFilters)">Search</button>
+</form>

@@ -1,0 +1,29 @@
+<div class="table-responsive">
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+            <th ng-repeat="tuple in result.tuples">{{tuple.header}}</th>
+        </thead>
+        <tbody>
+            <tr class="tr-clickable animate" ng-click="go('/catalog/' + item[result.tuples[1].value], item)" ng-repeat="item in filters.result.slice(((page.pageNumber-1)*page.itemsPerPage), ((page.pageNumber)*page.itemsPerPage))" ng-if="filters.type === 'catalog'">
+                <td>{{item[result.tuples[0].value]}}</td>
+                <td>{{item[result.tuples[1].value]}}</td>
+                <td>{{item[result.tuples[2].value]}}</td>
+                <td>{{item[result.tuples[3].value]}}</td>
+                <td>{{item[result.tuples[4].value]}}</td>
+                <td>{{item[result.tuples[5].value]}}</td>
+            </tr>
+            <tr class="tr-clickable animate" ng-click="go('/reviews/' + item[result.tuples[1].value], item)" ng-repeat="item in filters.result.slice(((page.pageNumber-1)*page.itemsPerPage), ((page.pageNumber)*page.itemsPerPage))" ng-if="filters.type === 'reviews'">
+                <td>{{item[result.tuples[0].value]}}</td>
+                <td>{{item[result.tuples[1].value]}}</td>
+                <td>{{item[result.tuples[2].value]}}</td>
+                <td>{{item[result.tuples[3].value]}}</td>
+                <td>{{item[result.tuples[4].value]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <uib-pagination ng-change="pageChanged()" total-items="filters.result.length" ng-model="page.pageNumber" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" items-per-page="page.itemsPerPage"></uib-pagination>
+</div>
+

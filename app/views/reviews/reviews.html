@@ -1,0 +1,19 @@
+<div class="customers view indent">
+    <div class="container">
+        <header>
+            <h3>Reviews</h3>
+        </header>
+
+        <!--Catalog table-->
+        <review-create-directive filters="filters"></review-create-directive>
+
+        <hr>
+
+        <!--Filter template here-->
+        <filter-directive filters="filters" page="page"></filter-directive>
+
+        <!--Dynamic table-->
+        <result-table-directive filters="filters" page="page"></result-table-directive>
+
+    </div>
+</div>

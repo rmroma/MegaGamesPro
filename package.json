@@ -1,0 +1,19 @@
+{
+  "name": "CustomerManager",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "connect-mongodb": "*",
+    "cookie-parser": "^1.4.1",
+    "csurf": "^1.8.3",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "mongodb": "^2.1.3",
+    "mongoose": "^4.3.4",
+    "multer": "^1.1.0",
+    "sprintf": "^0.1.5"
+  }
+}

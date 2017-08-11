@@ -1,0 +1,28 @@
+Inside APP:
+{
+	contactController
+
+	Directives:
+	piechart (Directive)
+	wcOverlay - change restriction as test
+	wcUnique.js - ?????	
+
+	Partials &v Services: 
+	dialogService & DialogHTML
+	ModalService & ModalHTML
+
+	Services: 
+	
+	config.js - Can possibly delete this. (Used to belong in app.js, but no longer in use.)
+}
+
+	home screen - Change pictures -done
+	About page - change video -done
+	Contact page - change custom picture -done
+
+	General concept: Change "Giga Games" --> "Mega Games" -done 
+
+	In catalog - add Delete. (Don't have to, only if it's easy.)
+	Can try to copy "delete" from reviews CRUD.
+
+

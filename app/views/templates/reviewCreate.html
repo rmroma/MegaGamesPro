@@ -1,0 +1,26 @@
+<button class="btn btn-primary fromAnimation" ng-click="showme=true" ng-hide="showme" ng-disabled="(!$root.isAdmin && edit === 'Edit') || !$root.isLoggedIn">{{edit}} Review</button>
+
+<form id="frm" name="frm" ng-show="showme" style="margin-left: 30px" class="fromAnimation">
+    <h5>Add Review</h5>
+    <div class="form-group">
+        <label>Title:</label>
+        <input name="myInput" type="text" class="form-control" placeholder="Review Title" ng-model="review.title" required ng-disabled="edit === 'Edit'">
+    </div>
+    <div class="form-group">
+        <label>Game:</label>
+
+        <select required class="form-control" ng-model="review.gameName" ng-disabled="selectDisabled" ng-disabled="edit === 'Edit'"ng->
+            <option ng-repeat="game in games" value="{{game.gameName}}">{{game.gameName}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Score:</label>
+        <input type="number" class="form-control" placeholder="Score" min="1" max="100" ng-model="review.score" required>
+    </div>
+    <div class="form-group">
+        <label>Review:</label>
+        <textarea form="frm" type="text" class="form-control reviewText" placeholder="Write your review here" ng-model="review.content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success" data-ng-click="createReview(review); showme=false">{{edit}} Review</button>
+    <button class="btn btn-default" ng-click="showme=false" formnovalidate>Cancel</button>
+</form>

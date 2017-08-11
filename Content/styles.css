@@ -1,0 +1,788 @@
+﻿/* ==== BASIC SETUP ==== */
+@font-face {
+    font-family: externalFont;
+    src: url(/Content/fonts/OpenSans-Regular.ttf);
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: externalFont;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 25px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* ==== HEADER ==== */
+header nav .logo {
+    background: url("/Content/Media/A2kFinal.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+nav.colored {
+    background-color: #2b2d31;
+    font-weight: 700;
+}
+
+/*CAROUSEL*/
+.img-responsive {
+    margin: -150px auto; /* Align slide image horizontally center ...*/
+}
+
+.carousel {
+    background: #2f4357;
+    overflow: hidden;
+}
+
+/* ==========  TOP LIST ============= */
+
+.top-list ul {
+    list-style-type: none;
+    width: 400px;
+}
+
+.top-list h3 {
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.top-list li img {
+    float: left;
+    margin: 0px 25px 0 0;
+    width: 70px;
+    height: 70px;
+}
+
+.top-list li p {
+    font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+.top-list li {
+    padding: 10px;
+    overflow: auto;
+}
+
+.top-list li:hover {
+    background: #F4FDCF;
+    cursor: pointer;
+}
+
+.top-list div.item-description {
+    display: inline-block;
+}
+
+.top-list div.item-description label {
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 275px;
+}
+
+.top-list div.item-rating {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    margin-top: 10px;
+    height: 35px;
+    width: 60px;
+    vertical-align: top;
+    font-size: x-large;
+    background: #26272b;
+    box-shadow: rgba(0, 0, 0, 0.75) 0 0 3px, rgba(255, 255, 255, 0.3) 0 0 1px inset;
+    color: #f1f1f4;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px;
+    text-align: center;
+    font-family: "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    border-radius: 400px;
+}
+
+/* ========== Text ============= */
+.vertical-table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* ========== Video ============= */
+.game-video {
+    width: 60%;
+    height: auto;
+    padding-top: 25px;
+}
+
+/* ========== Drop down menu sliding animation ============= */
+.open > .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.open > .dropdown-menu li a {
+    color: #000;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+}
+
+.dropdown-menu {
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    display: block;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.dropup .dropdown-menu {
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+}
+
+.dropup > .dropdown-menu:after {
+    border-bottom: 0;
+    border-top: 6px solid rgba(39, 45, 51, 0.9);
+    top: auto;
+    display: inline-block;
+    bottom: -6px;
+    content: '';
+    position: absolute;
+    left: 50%;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+/* ========== Game details ============= */
+.score-badge .game-score {
+    background: #26272b;
+    box-shadow: rgba(0, 0, 0, 0.75) 0 0 3px, rgba(255, 255, 255, 0.3) 0 0 1px inset;
+    color: #f1f1f4;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px;
+    text-align: center;
+    font-family: "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    z-index: 400;
+    border-radius: 400px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 70px;
+    width: 210px;
+    height: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.score-badge .review-icon {
+    font-size: 70px;
+    text-align: center;
+    line-height: 175px;
+}
+
+.bottom-links {
+    margin-top: 60px;
+}
+
+/* ========== Review details ============= */
+section article.review-post {
+    font-family: "proxima-nova", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+}
+
+section article.review-post header h2 {
+    font-weight: 500;
+}
+
+section article.review-post header .rating b {
+    color: darkorange;
+    font-size: 17px;
+}
+
+section article.review-post div.content {
+    margin-bottom: 25px;
+}
+
+/* ========== Review create ============= */
+.score-input {
+    width: 80px;
+}
+
+.content-input {
+    width: 500px;
+    height: 200px;
+}
+
+/* ========== tables ============= */
+.tr-clickable {
+    cursor: pointer;
+}
+
+.tr-clickable:hover td {
+    cursor: pointer;
+    background-color: #F4FDCF;
+}
+
+.form-control.large-input {
+    width: 200px;
+}
+
+.form-control.small-input {
+    width: 100px;
+}
+
+.small-margin-right {
+    margin-right: 5px;
+}
+
+.large-margin-right {
+    margin-right: 10px;
+}
+
+#ng-view {
+    position: relative;
+    padding-top: 25px;
+}
+
+.view {
+
+}
+
+.white {
+    color: white;
+}
+
+.white:hover {
+    color: white;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    height: 100px;
+    width: 225px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cardHeader {
+    background-color: #027FF4;
+    font-size: 14pt;
+    color: white;
+    padding: 5px;
+}
+
+.cardClose {
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.cardContainer {
+    width: 95%;
+}
+
+.cardBody {
+    padding-left: 5px;
+}
+
+.cardBodyRight {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.cardImage {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.lastRow {
+    background-color: #ccc;
+}
+
+.indent {
+    margin-left: 5px;
+}
+
+.ordersTable {
+    width: 85%;
+}
+
+.orders th, .customers th {
+    width: 20%;
+    cursor: pointer;
+}
+
+.ordersTable tr:first-child th, .customersTable tr:first-child th {
+    background-color: #027FF4;
+    color: #fff;
+    font-weight: bold;
+}
+
+.gridContainer td {
+    vertical-align: middle;
+}
+
+#submitCustomer {
+    margin-left: 50px;
+    margin-top: -8px;
+}
+
+.close {
+    font-size: 15pt;
+    opacity: 1.0;
+}
+
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.btn.active {
+    background-color: #f7f7f7;
+}
+
+/* ng-cloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng.ng-cloak {
+    display: none;
+}
+
+.novalidate {
+    border-left: none !important;
+}
+
+input.ng-invalid, select.ng-invalid {
+    border-left: 5px solid #E03930;
+}
+
+input.ng-valid, select.ng-valid {
+    border-left: 5px solid #57A83F;
+}
+
+.errorMessage {
+    position: absolute;
+    padding: 5px;
+    background-color: #E03930;
+    color: black;
+}
+
+.editIcon {
+    margin-top: 2px;
+}
+
+.pagination li {
+    cursor: pointer;
+}
+
+/* wcOverlay directive CSS styles */
+.overlayContainer {
+    display: none;
+}
+
+.overlayBackground {
+    top: 0px;
+    left: 0px;
+    padding-left: 100px;
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background-color: #808080;
+    opacity: 0.3;
+}
+
+.overlayContent {
+    position: absolute;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-weight: bold;
+    height: 100px;
+    width: 300px;
+    z-index: 1000;
+    text-align: center;
+}
+
+/* ========== API Multiple columns ============= */
+div #games p {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+div #games h2 {
+    text-shadow: 3px 3px #DDDDDD;
+}
+
+/* ========== Loading Spinner ============= */
+#fountainG {
+    position: relative;
+    width: 234px;
+    height: 28px;
+    margin: auto;
+}
+
+.fountainG {
+    position: absolute;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    width: 28px;
+    height: 28px;
+    animation-name: bounce_fountainG;
+    -o-animation-name: bounce_fountainG;
+    -ms-animation-name: bounce_fountainG;
+    -webkit-animation-name: bounce_fountainG;
+    -moz-animation-name: bounce_fountainG;
+    animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+    transform: scale(.3);
+    -o-transform: scale(.3);
+    -ms-transform: scale(.3);
+    -webkit-transform: scale(.3);
+    -moz-transform: scale(.3);
+    border-radius: 19px;
+    -o-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+}
+
+#fountainG_1 {
+    left: 0;
+    animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+}
+
+#fountainG_2 {
+    left: 29px;
+    animation-delay: 0.75s;
+    -o-animation-delay: 0.75s;
+    -ms-animation-delay: 0.75s;
+    -webkit-animation-delay: 0.75s;
+    -moz-animation-delay: 0.75s;
+}
+
+#fountainG_3 {
+    left: 58px;
+    animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    -ms-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+    -moz-animation-delay: 0.9s;
+}
+
+#fountainG_4 {
+    left: 88px;
+    animation-delay: 1.05s;
+    -o-animation-delay: 1.05s;
+    -ms-animation-delay: 1.05s;
+    -webkit-animation-delay: 1.05s;
+    -moz-animation-delay: 1.05s;
+}
+
+#fountainG_5 {
+    left: 117px;
+    animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+}
+
+#fountainG_6 {
+    left: 146px;
+    animation-delay: 1.35s;
+    -o-animation-delay: 1.35s;
+    -ms-animation-delay: 1.35s;
+    -webkit-animation-delay: 1.35s;
+    -moz-animation-delay: 1.35s;
+}
+
+#fountainG_7 {
+    left: 175px;
+    animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -ms-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+
+#fountainG_8 {
+    left: 205px;
+    animation-delay: 1.64s;
+    -o-animation-delay: 1.64s;
+    -ms-animation-delay: 1.64s;
+    -webkit-animation-delay: 1.64s;
+    -moz-animation-delay: 1.64s;
+}
+
+@keyframes bounce_fountainG {
+    0% {
+        transform: scale(1);
+        background-color: rgb(0, 0, 0);
+    }
+
+    100% {
+        transform: scale(.3);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@-o-keyframes bounce_fountainG {
+    0% {
+        -o-transform: scale(1);
+        background-color: rgb(0, 0, 0);
+    }
+
+    100% {
+        -o-transform: scale(.3);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@-ms-keyframes bounce_fountainG {
+    0% {
+        -ms-transform: scale(1);
+        background-color: rgb(0, 0, 0);
+    }
+
+    100% {
+        -ms-transform: scale(.3);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@-webkit-keyframes bounce_fountainG {
+    0% {
+        -webkit-transform: scale(1);
+        background-color: rgb(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: scale(.3);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@-moz-keyframes bounce_fountainG {
+    0% {
+        -moz-transform: scale(1);
+        background-color: rgb(0, 0, 0);
+    }
+
+    100% {
+        -moz-transform: scale(.3);
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+/* ========== purchase modal ============= */
+.modal-body input.form-control {
+    max-width: 75px;
+}
+
+/* ========== purchase modal ============= */
+.filters-catalog .by-name,
+.filters-catalog .by-email,
+.filters-catalog .by-score,
+.filters-catalog .by-genre {
+    max-width: 105px;
+    display: inline-block;
+    float: left;
+    margin-left: 15px;
+    height: 20px;
+    line-height: 33px;
+    vertical-align: middle;
+}
+
+/* ========== bar chart ============= */
+#tooltip {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+#tooltip.hidden {
+    display: none;
+}
+
+#tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+rect {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.bargraph {
+    position: relative;
+}
+
+/* Transition on image in contact. */
+.trans {
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
+}
+
+.trans:hover {
+    width: 300px;
+}
+
+/* Google maps style. */
+.googleMap {
+    width: 500px;
+    height: 380px;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+
+/* Text area for the review
+.reviewText {
+    background-color:#FFF;
+    top:50px;
+    left:25px;
+    width:300px;
+    height:10px;
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+}
+.reviewText:focus {
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+    background-color: #FFF;
+
+    top:0;
+    left:0;
+    height:150px;
+    width:600px;
+    border-radius:5px;
+    border: 2px solid #d4d0ba;
+    box-shadow: 0px 0px 15px #FFFFFF;
+}*/
+
+.reviewText {
+    background-color:#FFF;
+    top:50px;
+    left:25px;
+    height:15px;
+}
+.reviewText:focus {
+    background-color:#FFF;
+    top:0;
+    left:0;
+    height:150px;
+    width:600px;
+}
+
+
+.fromAnimation.ng-hide-add,
+.fromAnimation.ng-hide-remove {
+    /* the transition is defined in the active class */
+    transition: 0.5s linear all;
+}
+
+.fromAnimation.ng-hide {
+    line-height: 0;
+    opacity: 0;
+    padding: 0;
+}
+
+.titleAnimation:hover {
+    -webkit-transform: skew(0deg,20deg);
+    transform: skew(0deg,20deg);
+}
+.titleAnimation {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.animate {
+    -webkit-transition: 0.5s;
+}
+
+.animate.ng-enter {
+    opacity: 0;
+    -webkit-transition: 0.5s;
+}
+
+.animate.ng-leave {
+    -webkit-transition: 0s;
+}
+
+.animate.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.animate.ng-leave.ng-leave-active {
+    -webkit-transition: 0s;
+}

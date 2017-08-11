@@ -1,0 +1,17 @@
+<div class="customers view indent">
+    <div class="container">
+        <header>
+            <h3>Game Catalog</h3>
+        </header>
+
+        <!--Catalog table-->
+        <game-create-directive filters="filters"></game-create-directive>
+
+        <!--Filter template here-->
+        <filter-directive filters="filters" page="page"></filter-directive>
+
+        <!--Catalog table-->
+        <result-table-directive filters="filters" page="page"></result-table-directive>
+
+    </div>
+</div>
