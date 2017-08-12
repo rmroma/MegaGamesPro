@@ -4,9 +4,13 @@
 
 ## Description
 
-Project using MEAN (MongoDB,Express,Angular2,Node.js) 
+Project using MEAN (MongoDB,Express,Angular,Node.js) 
 
 ## Install
 
-Install Node.js https://nodejs.org/en/download/package-manager/#windows
+Install Node.js https://nodejs.org/en/download/package-manager/#windows <br /> 
 Install MongoDB https://docs.mongodb.com/manual/installation/
+
+## Screenshots
+
+
