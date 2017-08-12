@@ -13,10 +13,10 @@ Install MongoDB https://docs.mongodb.com/manual/installation/
 
 ## Screenshots
 
-![My image](media/pic1.png)
+![My image](media/pic1.png)<br /><br />
 
-![My image](media/pic2.png)
+![My image](media/pic2.png)<br /><br />
 
-![My image](media/pic3.png)
+![My image](media/pic3.png)<br /><br />
 
-![My image](media/pic4.png)
+![My image](media/pic4.png)<br /><br />
