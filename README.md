@@ -10,9 +10,9 @@ Project using MEAN (MongoDB,Express,Angular,Node.js)
 
 Install Node.js https://nodejs.org/en/download/package-manager/#windows <br /> 
 Install MongoDB https://docs.mongodb.com/manual/installation/ <br /> 
-clone project 
-Run run.bat file
-Open browser on localhost:3000
+clone project <br />
+Run run.bat file<br />
+Open browser on localhost:3000<br /> 
 
 
 ## Screenshots
